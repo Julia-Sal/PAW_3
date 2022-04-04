@@ -1,6 +1,7 @@
 <?php
 require_once dirname(__FILE__).'/../config.php';
 
+include _ROOT_PATH.'/app/security/check.php';
 
 function getParams(&$kwota,&$ile_mies,&$oprocentowanie){
 	$kwota = isset($_REQUEST['kwota']) ? $_REQUEST['kwota'] : null;
@@ -35,7 +36,7 @@ function validate(&$kwota,&$ile_mies,&$oprocentowanie,&$messages){
 		$messages [] = 'Czas nie zostal poprawnie wprowadzony';
 	}
 	if (! is_numeric( $oprocentowanie )) {
-		$messages [] = 'Druga wartość nie jest liczbą całkowitą';
+		$messages [] = 'Oprocentowanie nie jest liczbą całkowitą';
 	}
 	
 	if (count ( $messages ) != 0) return false;
@@ -49,7 +50,12 @@ function process(&$kwota,&$ile_mies,&$oprocentowanie,&$messages,&$rata){
 	$ile_mies = intval($ile_mies);
 	$oprocentowanie = intval($oprocentowanie);
 	
-	$rata = ($kwota + ($oprocentowanie/100)*$kwota*$ile_mies/12)/$ile_mies;
+	//$rata = ($kwota + ($oprocentowanie/100)*$kwota*$ile_mies/12)/$ile_mies;
+	
+	if($role == 'user') $messages [] = 'Jesteś userem, nie masz prawa';
+	else {
+		$rata = ($kwota + ($oprocentowanie/100)*$kwota*$ile_mies/12)/$ile_mies;}
+		
 	//miesięczna
 }
 
@@ -60,7 +66,7 @@ $rata = null;
 $messages = array();
 
 getParams($kwota,$ile_mies,$oprocentowanie);
-if ( validate($kwota,$ile_mies,$oprocentowanie,$messages) ) { // gdy brak błędów
+if ( validate($kwota,$ile_mies,$oprocentowanie,$messages) ) { 
 	process($kwota,$ile_mies,$oprocentowanie,$messages,$rata);
 }
 
