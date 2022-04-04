@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2022-04-04 19:08:46
-  from "C:\int\htdocs\kalkulator_kred_1\templates\main.html" */
+/* Smarty version 4.1.0, created on 2022-04-04 19:33:17
+  from 'C:\int\htdocs\kalkulator_kred_1\templates\main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.30',
-  'unifunc' => 'content_624b261ef01097_26351492',
+  'version' => '4.1.0',
+  'unifunc' => 'content_624b2bdd484719_48396784',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_624b261ef01097_26351492 (Smarty_Internal_Template $_smarty_tpl) {
+function content_624b2bdd484719_48396784 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -29,9 +29,9 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['page_description']->value)===null||$tmp==='' ? 'Opis domyślny' : $tmp);?>
+	<meta name="description" content="<?php echo (($tmp = $_smarty_tpl->tpl_vars['page_description']->value ?? null)===null||$tmp==='' ? 'Opis domyślny' ?? null : $tmp);?>
 ">
-	<title><?php echo (($tmp = @$_smarty_tpl->tpl_vars['page_title']->value)===null||$tmp==='' ? "Tytuł domyślny" : $tmp);?>
+	<title><?php echo (($tmp = $_smarty_tpl->tpl_vars['page_title']->value ?? null)===null||$tmp==='' ? "Tytuł domyślny" ?? null : $tmp);?>
 </title>
 	<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
@@ -40,19 +40,19 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 <body>
 
 <div class="header">
-	<h1><?php echo (($tmp = @$_smarty_tpl->tpl_vars['page_title']->value)===null||$tmp==='' ? "Tytuł domyślny" : $tmp);?>
+	<h1><?php echo (($tmp = $_smarty_tpl->tpl_vars['page_title']->value ?? null)===null||$tmp==='' ? "Tytuł domyślny" ?? null : $tmp);?>
 </h1>
-	<h2><?php echo (($tmp = @$_smarty_tpl->tpl_vars['page_header']->value)===null||$tmp==='' ? "Tytuł domyślny" : $tmp);?>
+	<h2><?php echo (($tmp = $_smarty_tpl->tpl_vars['page_header']->value ?? null)===null||$tmp==='' ? "Tytuł domyślny" ?? null : $tmp);?>
 </h1>
 	<p>
-		<?php echo (($tmp = @$_smarty_tpl->tpl_vars['page_description']->value)===null||$tmp==='' ? "Opis domyślny" : $tmp);?>
+		<?php echo (($tmp = $_smarty_tpl->tpl_vars['page_description']->value ?? null)===null||$tmp==='' ? "Opis domyślny" ?? null : $tmp);?>
 
 	</p>
 </div>
 
 <div class="content">
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1247270653624b261ef00073_95719731', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1243276317624b2bdd483af4_68867709', 'content');
 ?>
 
 </div><!-- content -->
@@ -60,7 +60,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1247270653624b261e
 <div class="footer">
 	<p>
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2078147903624b261ef00bb8_50740358', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2046116762624b2bdd4841d5_51853723', 'footer');
 ?>
 
 	</p>
@@ -72,8 +72,14 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2078147903624b261e
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_1247270653624b261ef00073_95719731 extends Smarty_Internal_Block
+class Block_1243276317624b2bdd483af4_68867709 extends Smarty_Internal_Block
 {
+public $subBlocks = array (
+  'content' => 
+  array (
+    0 => 'Block_1243276317624b2bdd483af4_68867709',
+  ),
+);
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
  Domyślna treść zawartości .... <?php
@@ -81,8 +87,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'footer'} */
-class Block_2078147903624b261ef00bb8_50740358 extends Smarty_Internal_Block
+class Block_2046116762624b2bdd4841d5_51853723 extends Smarty_Internal_Block
 {
+public $subBlocks = array (
+  'footer' => 
+  array (
+    0 => 'Block_2046116762624b2bdd4841d5_51853723',
+  ),
+);
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
  Domyślna treść stopki .... <?php

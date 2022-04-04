@@ -1,4 +1,4 @@
-{extends file="../templates/main.html"}
+{extends file=$conf->root_path|cat:"/templates/main.html"}
 
 {block name=footer}Najlepszy kalkulator kredytowy{/block}
 
@@ -6,7 +6,7 @@
 
 <h2 class="content-head is-center">Prosty kalkulator kredytowy </h2>
 
-<form class="pure-form pure-form-stacked" action="{$conf->app_url}/app/calc.php" method="post">
+<form class="pure-form pure-form-stacked" action="{$conf->action_root}calcCompute" method="post">
 		<fieldset>
 
 		<label for="kwota">Kwota: </label>
