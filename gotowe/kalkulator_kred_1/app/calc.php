@@ -1,73 +1,68 @@
 <?php
 require_once dirname(__FILE__).'/../config.php';
+require_once _ROOT_PATH.'/lib/smarty/Smarty.class.php';
 
-include _ROOT_PATH.'/app/security/check.php';
-
-function getParams(&$kwota,&$ile_mies,&$oprocentowanie){
-	$kwota = isset($_REQUEST['kwota']) ? $_REQUEST['kwota'] : null;
-	$ile_mies = isset($_REQUEST['ile_mies']) ? $_REQUEST['ile_mies'] : null;
-	$oprocentowanie = isset($_REQUEST['oprocentowanie']) ? $_REQUEST['oprocentowanie'] : null;	
-	$rata = isset($_REQUEST['rata']) ? $_REQUEST['rata'] : null;
+function getParams(&$form){
+	$form['kwota'] = isset($_REQUEST['kwota']) ? $_REQUEST['kwota'] : null;
+	$form['ile_mies'] = isset($_REQUEST['ile_mies']) ? $_REQUEST['ile_mies'] : null;
+	$form['oprocentowanie'] = isset($_REQUEST['oprocentowanie']) ? $_REQUEST['oprocentowanie'] : null;	
 }
 
-function validate(&$kwota,&$ile_mies,&$oprocentowanie,&$messages){
-	if ( ! (isset($kwota) && isset($ile_mies) && isset($oprocentowanie))) {
-		return false;
-	}
+function validate(&$form,&$infos, &$msgs, &$hide_intro ){
+	if ( ! (isset($form['kwota']) && isset($form['ile_mies']) && isset($form['oprocentowanie']))) return false;
 	
-	if ( $kwota == "") {
-		$messages [] = 'Nie podano kwoty';
-	}
-	if ( $ile_mies == "") {
-		$messages [] = 'Nie podano czasu';
-	}
-	if ( $oprocentowanie == "") {
-		$messages [] = 'Nie podano oprocentowania';
-	}
+	$hide_intro = true;
 	
-	if (count ( $messages ) != 0) return false;
+	if ( $form['kwota'] == "") $msgs [] = 'Nie podano kwoty';
+	if ( $form['ile_mies'] == "") $msgs [] = 'Nie podano czasu';
+	if ( $form['oprocentowanie'] == "") $msgs [] = 'Nie podano oprocentowania';
 	
-	
-	
-	if (! is_numeric( $kwota )) {
-		$messages [] = 'Pierwsza wartość nie jest liczbą całkowitą';
+	if (count ( $msgs ) == 0){
+	if (! is_numeric( $form['kwota'] )) $msgs [] = 'Pierwsza wartość nie jest liczbą całkowitą';
+	if (! is_numeric( $form['ile_mies'] )) $msgs [] = 'Czas nie zostal poprawnie wprowadzony';
+	if (! is_numeric( $form['oprocentowanie'] )) $msgs [] = 'Druga wartość nie jest liczbą całkowitą';
 	}
-	if (! is_numeric( $ile_mies )) {
-		$messages [] = 'Czas nie zostal poprawnie wprowadzony';
-	}
-	if (! is_numeric( $oprocentowanie )) {
-		$messages [] = 'Oprocentowanie nie jest liczbą całkowitą';
-	}
-	
-	if (count ( $messages ) != 0) return false;
+	if(count($msgs)>0) return false;
 	else return true;
 }
 
-function process(&$kwota,&$ile_mies,&$oprocentowanie,&$messages,&$rata){
-	global $role;
+
+function process(&$form,&$infos, &$msgs,&$result){
+	$infos [] = 'Parametry poprawne. Wykonuję obliczenia.';
 	
-	$kwota = intval($kwota);
-	$ile_mies = intval($ile_mies);
-	$oprocentowanie = intval($oprocentowanie);
+	$form['kwota'] = intval($form['kwota']);
+	$form['ile_mies'] = intval($form['ile_mies']);
+	$form['oprocentowanie'] = intval($form['oprocentowanie']);
 	
-	//$rata = ($kwota + ($oprocentowanie/100)*$kwota*$ile_mies/12)/$ile_mies;
-	
-	if($role == 'user') $messages [] = 'Jesteś userem, nie masz prawa';
-	else {
-		$rata = ($kwota + ($oprocentowanie/100)*$kwota*$ile_mies/12)/$ile_mies;}
-		
+	$result = ($form['kwota'] + ($form['oprocentowanie']/100)*$form['kwota']*$form['ile_mies']/12)/$form['ile_mies'];
 	//miesięczna
 }
 
-$kwota = null;
-$ile_mies = null;
-$oprocentowanie = null;
-$rata = null;
+$form = null;
+$infos = array();
 $messages = array();
+$result = null;
+$hide_intro = false;
 
-getParams($kwota,$ile_mies,$oprocentowanie);
-if ( validate($kwota,$ile_mies,$oprocentowanie,$messages) ) { 
-	process($kwota,$ile_mies,$oprocentowanie,$messages,$rata);
+getParams($form);
+if ( validate($form,$messages, $infos, $hide_intro) ) {
+	process($form,$infos,$messages,$result);
 }
 
-include 'calc_view.php';
+$smarty = new Smarty();
+
+$smarty->assign('app_url',_APP_URL);
+$smarty->assign('root_path',_ROOT_PATH);
+$smarty->assign('page_title','Kalkulator Kredytowy');
+$smarty->assign('page_description','Pieniądze szczęścia nie dają, ale żyć pomagają.');
+$smarty->assign('page_header','Szablony Smarty');
+
+$smarty->assign('hide_intro',$hide_intro);
+
+$smarty->assign('form',$form);
+$smarty->assign('result',$result);
+$smarty->assign('messages',$messages);
+$smarty->assign('infos',$infos);
+
+
+$smarty->display(_ROOT_PATH.'/app/calc.html');
