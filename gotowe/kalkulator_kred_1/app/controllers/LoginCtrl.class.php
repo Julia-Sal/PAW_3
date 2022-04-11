@@ -19,10 +19,11 @@ class LoginCtrl{
 	
 	public function validate() {
 		if (! (isset ( $this->form->login ) && isset ( $this->form->pass ))) {
-			getMessages()->addError('Błędne wywołanie aplikacji !');
+			return false;
 		}
 			
 		if (! getMessages()->isError ()) {
+			
 			if ($this->form->login == "") {
 				getMessages()->addError ( 'Nie podano loginu' );
 			}
@@ -30,20 +31,20 @@ class LoginCtrl{
 				getMessages()->addError ( 'Nie podano hasła' );
 			}
 		}
-
 		if ( !getMessages()->isError() ) {
+		
 			if ($this->form->login == "admin" && $this->form->pass == "admin") {
-				if (session_status() == PHP_SESSION_NONE) {
-					session_start();
-				}
+
 				$user = new User($this->form->login, 'admin');
-				$_SESSION['user'] = serialize($user);				
+				$_SESSION['user'] = serialize($user);
+				addRole($user->role);
+
 			} else if ($this->form->login == "user" && $this->form->pass == "user") {
-				if (session_status() == PHP_SESSION_NONE) {
-					session_start();
-				}
+
 				$user = new User($this->form->login, 'user');
-				$_SESSION['user'] = serialize($user);				
+				$_SESSION['user'] = serialize($user);
+				addRole($user->role);
+
 			} else {
 				getMessages()->addError('Niepoprawny login lub hasło');
 			}
@@ -65,9 +66,6 @@ class LoginCtrl{
 	}
 	
 	public function doLogout(){
-		if (session_status() == PHP_SESSION_NONE) {
-			session_start();
-		}
 		session_destroy();
 		
 		getMessages()->addInfo('Poprawnie wylogowano z systemu');

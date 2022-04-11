@@ -4,7 +4,10 @@
 
 {block name=content}
 
-<h2 class="content-head is-center">Prosty kalkulator kredytowy </h2>
+<div class="pure-menu pure-menu-horizontal bottom-margin">
+	<a href="{$conf->action_url}logout"  class="pure-menu-heading pure-menu-link">wyloguj</a>
+	<span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>
+</div>
 
 <form class="pure-form pure-form-stacked" action="{$conf->action_root}calcCompute" method="post">
 		<fieldset>

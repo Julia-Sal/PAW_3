@@ -77,9 +77,8 @@ class CalcCtrl {
 		
 	
 	public function generateView(){
-		global $user;
 
-		getSmarty()->assign('user',$user);
+		getSmarty()->assign('user',unserialize($_SESSION['user']));
 		
 		getSmarty()->assign('page_title','KALKULATOR KREDYTOWY');
 		getSmarty()->assign('page_description','Pieniądze szczęścia nie dają, ale żyć pomagają');
