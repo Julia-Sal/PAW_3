@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-04 19:57:13
+/* Smarty version 4.1.0, created on 2022-04-05 09:19:45
   from 'C:\int\htdocs\kalkulator_kred_1\app\views\templates\main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624b31794fb690_43641575',
+  'unifunc' => 'content_624bed91a7c261_26895587',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_624b31794fb690_43641575 (Smarty_Internal_Template $_smarty_tpl) {
+function content_624bed91a7c261_26895587 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -52,7 +52,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 
 <div class="content">
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1797539912624b31794fa5a7_53847358', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1511817367624bed91a79575_36774065', 'content');
 ?>
 
 </div><!-- content -->
@@ -60,7 +60,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1797539912624b3179
 <div class="footer">
 	<p>
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1698166596624b31794fad56_50690882', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_936530398624bed91a7ae56_84335324', 'footer');
 ?>
 
 	</p>
@@ -72,12 +72,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1698166596624b3179
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_1797539912624b31794fa5a7_53847358 extends Smarty_Internal_Block
+class Block_1511817367624bed91a79575_36774065 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1797539912624b31794fa5a7_53847358',
+    0 => 'Block_1511817367624bed91a79575_36774065',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -87,12 +87,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'footer'} */
-class Block_1698166596624b31794fad56_50690882 extends Smarty_Internal_Block
+class Block_936530398624bed91a7ae56_84335324 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_1698166596624b31794fad56_50690882',
+    0 => 'Block_936530398624bed91a7ae56_84335324',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
