@@ -57,8 +57,7 @@ class CalcCtrl {
 		return ! getMessages()->isError();
 	}
 	
-	
-	public function process(){
+	public function action_calcCompute(){
 
 		$this->getparams();
 		
@@ -74,7 +73,10 @@ class CalcCtrl {
 			}
 		$this->generateView();
 	}
-		
+		public function action_calcShow(){
+		getMessages()->addInfo('Witaj w kalkulatorze');
+		$this->generateView();
+	}
 	
 	public function generateView(){
 
@@ -82,8 +84,7 @@ class CalcCtrl {
 		
 		getSmarty()->assign('page_title','KALKULATOR KREDYTOWY');
 		getSmarty()->assign('page_description','Pieniądze szczęścia nie dają, ale żyć pomagają');
-		getSmarty()->assign('page_header','Kontroler główny');
-					
+				
 		getSmarty()->assign('form',$this->form);
 		getSmarty()->assign('res',$this->result);
 		
