@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-11 15:50:52
+/* Smarty version 4.1.0, created on 2022-04-18 20:08:30
   from 'C:\int\htdocs\kalkulator_kred_1\app\views\CalcView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6254323cb8fe42_85640818',
+  'unifunc' => 'content_625da91ef40e84_22879874',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,28 +20,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6254323cb8fe42_85640818 (Smarty_Internal_Template $_smarty_tpl) {
+function content_625da91ef40e84_22879874 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6439549046254323cab7ed8_10164528', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1172383322625da91ef00909_01419636', 'footer');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9952025646254323cab8c09_74370928', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_871400696625da91ef015e5_84647396', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.html");
 }
 /* {block 'footer'} */
-class Block_6439549046254323cab7ed8_10164528 extends Smarty_Internal_Block
+class Block_1172383322625da91ef00909_01419636 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_6439549046254323cab7ed8_10164528',
+    0 => 'Block_1172383322625da91ef00909_01419636',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -51,12 +51,12 @@ Najlepszy kalkulator kredytowy<?php
 }
 /* {/block 'footer'} */
 /* {block 'content'} */
-class Block_9952025646254323cab8c09_74370928 extends Smarty_Internal_Block
+class Block_871400696625da91ef015e5_84647396 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_9952025646254323cab8c09_74370928',
+    0 => 'Block_871400696625da91ef015e5_84647396',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

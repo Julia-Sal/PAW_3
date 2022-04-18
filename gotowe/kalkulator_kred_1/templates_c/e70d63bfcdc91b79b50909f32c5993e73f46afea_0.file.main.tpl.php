@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-05 09:19:18
+/* Smarty version 4.1.0, created on 2022-04-18 20:12:32
   from 'C:\int\htdocs\kalkulator_kred_1\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624bed7633a364_23891038',
+  'unifunc' => 'content_625daa109db195_25604001',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_624bed7633a364_23891038 (Smarty_Internal_Template $_smarty_tpl) {
+function content_625daa109db195_25604001 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -37,19 +37,19 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 <body>
 	<div style="margin: 1em;">
 		<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1722083555624bed76339380_54139428', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_854337519625daa109dac18_46658071', 'content');
 ?>
 
 	</div>
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_1722083555624bed76339380_54139428 extends Smarty_Internal_Block
+class Block_854337519625daa109dac18_46658071 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1722083555624bed76339380_54139428',
+    0 => 'Block_854337519625daa109dac18_46658071',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

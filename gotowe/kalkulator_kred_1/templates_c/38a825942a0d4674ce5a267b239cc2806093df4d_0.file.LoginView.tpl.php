@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-05 09:18:49
+/* Smarty version 4.1.0, created on 2022-04-18 20:12:32
   from 'C:\int\htdocs\kalkulator_kred_1\app\views\LoginView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624bed59dfba06_12718644',
+  'unifunc' => 'content_625daa1099c360_61467993',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,25 +21,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:messages.tpl' => 1,
   ),
 ),false)) {
-function content_624bed59dfba06_12718644 (Smarty_Internal_Template $_smarty_tpl) {
+function content_625daa1099c360_61467993 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_371429783624bed59df6797_20893841', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_258382997625daa10954e11_33823510', 'content');
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_371429783624bed59df6797_20893841 extends Smarty_Internal_Block
+class Block_258382997625daa10954e11_33823510 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_371429783624bed59df6797_20893841',
+    0 => 'Block_258382997625daa10954e11_33823510',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

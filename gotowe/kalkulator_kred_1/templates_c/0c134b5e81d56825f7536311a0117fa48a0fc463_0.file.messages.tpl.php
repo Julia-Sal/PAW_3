@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-05 09:19:18
+/* Smarty version 4.1.0, created on 2022-04-18 20:12:32
   from 'C:\int\htdocs\kalkulator_kred_1\app\views\templates\messages.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_624bed764797e2_87092637',
+  'unifunc' => 'content_625daa10a207c0_31644998',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0c134b5e81d56825f7536311a0117fa48a0fc463' => 
     array (
       0 => 'C:\\int\\htdocs\\kalkulator_kred_1\\app\\views\\templates\\messages.tpl',
-      1 => 1523566202,
+      1 => 1523615504,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_624bed764797e2_87092637 (Smarty_Internal_Template $_smarty_tpl) {
+function content_625daa10a207c0_31644998 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['msgs']->value->isError()) {?>
-<div class="messages err">
+<div class="messages error">
 	<ol>
 	<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['msgs']->value->getErrors(), 'err');
@@ -39,7 +39,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 <?php }
 if ($_smarty_tpl->tpl_vars['msgs']->value->isInfo()) {?>
-<div class="messages inf bottom-margin">
+<div class="messages info bottom-margin">
 	<ol>
 	<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['msgs']->value->getInfos(), 'inf');
