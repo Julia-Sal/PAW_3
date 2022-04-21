@@ -9,6 +9,9 @@
 	<span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>
 </div>
 
+
+
+
 <form class="pure-form pure-form-stacked" action="{$conf->action_root}calcCompute" method="post">
 		<fieldset>
 
@@ -55,6 +58,15 @@
 	{$res->result}
 	</p>
 {/if}
+
+
+
+
+
+<div class="bottom-margin">
+<a class="pure-button button-success" href="{$conf->action_root}personList">Zobacz wpisy</a>
+</div>
+
 
 </div>
 {/block}

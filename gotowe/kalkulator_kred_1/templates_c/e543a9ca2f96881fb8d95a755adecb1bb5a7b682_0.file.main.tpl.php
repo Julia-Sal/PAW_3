@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.30, created on 2022-04-11 16:04:03
-  from "C:\int\htdocs\php_07_routing\app\views\templates\main.tpl" */
+/* Smarty version 4.1.0, created on 2022-04-21 14:39:06
+  from 'C:\int\htdocs\kalkulator_kred_baza\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.30',
-  'unifunc' => 'content_6254355395de11_53400485',
+  'version' => '4.1.0',
+  'unifunc' => 'content_6261506a7c0768_25343069',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '563cae784135b315cfe67a59124aa9657729433d' => 
+    'e543a9ca2f96881fb8d95a755adecb1bb5a7b682' => 
     array (
-      0 => 'C:\\int\\htdocs\\php_07_routing\\app\\views\\templates\\main.tpl',
+      0 => 'C:\\int\\htdocs\\kalkulator_kred_baza\\app\\views\\templates\\main.tpl',
       1 => 1523565760,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6254355395de11_53400485 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6261506a7c0768_25343069 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -28,7 +28,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 <head>
 	<meta charset="utf-8" />
-	<title><?php echo (($tmp = @$_smarty_tpl->tpl_vars['page_title']->value)===null||$tmp==='' ? "brak tytułu" : $tmp);?>
+	<title><?php echo (($tmp = $_smarty_tpl->tpl_vars['page_title']->value ?? null)===null||$tmp==='' ? "brak tytułu" ?? null : $tmp);?>
 </title>
 	<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
@@ -37,15 +37,21 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 <body>
 	<div style="margin: 1em;">
 		<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9775608206254355395da97_33703423', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17272192936261506a7c01e0_07012256', 'content');
 ?>
 
 	</div>
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_9775608206254355395da97_33703423 extends Smarty_Internal_Block
+class Block_17272192936261506a7c01e0_07012256 extends Smarty_Internal_Block
 {
+public $subBlocks = array (
+  'content' => 
+  array (
+    0 => 'Block_17272192936261506a7c01e0_07012256',
+  ),
+);
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
  Domyślna treść zawartości .... <?php

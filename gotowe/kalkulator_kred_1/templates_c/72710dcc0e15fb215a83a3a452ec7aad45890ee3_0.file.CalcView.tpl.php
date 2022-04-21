@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-04-21 16:03:48
-  from 'C:\int\htdocs\kalkulator_kred_1\app\views\CalcView.tpl' */
+/* Smarty version 4.1.0, created on 2022-04-21 15:58:51
+  from 'C:\int\htdocs\kalkulator_kred_baza\app\views\CalcView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6261644455e408_25874913',
+  'unifunc' => 'content_6261631b3a3a42_06178178',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '33ef91521dceaf5024ef4ec43e2c660bbb52177c' => 
+    '72710dcc0e15fb215a83a3a452ec7aad45890ee3' => 
     array (
-      0 => 'C:\\int\\htdocs\\kalkulator_kred_1\\app\\views\\CalcView.tpl',
+      0 => 'C:\\int\\htdocs\\kalkulator_kred_baza\\app\\views\\CalcView.tpl',
       1 => 1650549235,
       2 => 'file',
     ),
@@ -20,28 +20,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6261644455e408_25874913 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6261631b3a3a42_06178178 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7472733206261644454f199_39413143', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14176002226261631b395984_66823574', 'footer');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_211264196862616444550120_92400334', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19939195296261631b396174_76854205', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.html");
 }
 /* {block 'footer'} */
-class Block_7472733206261644454f199_39413143 extends Smarty_Internal_Block
+class Block_14176002226261631b395984_66823574 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_7472733206261644454f199_39413143',
+    0 => 'Block_14176002226261631b395984_66823574',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -51,12 +51,12 @@ Najlepszy kalkulator kredytowy<?php
 }
 /* {/block 'footer'} */
 /* {block 'content'} */
-class Block_211264196862616444550120_92400334 extends Smarty_Internal_Block
+class Block_19939195296261631b396174_76854205 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_211264196862616444550120_92400334',
+    0 => 'Block_19939195296261631b396174_76854205',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
